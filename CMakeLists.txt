@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.23)
 project(calc VERSION 0.1.0)
 
+
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
+enable_testing()
 add_subdirectory(test)
 
 file(GLOB_RECURSE SOURCE_FILES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/src/*.cpp)
