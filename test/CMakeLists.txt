@@ -1,0 +1,5 @@
+file(GLOB_RECURSE SOURCE_FILES CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/test/*.cpp)
+add_executable(unit-tests ${SOURCE_FILES})
+target_include_directories(unit-tests PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(unit-tests ${CONAN_LIBS})
+target_compile_features(unit-tests PRIVATE cxx_std_17)
